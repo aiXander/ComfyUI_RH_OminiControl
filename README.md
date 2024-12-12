@@ -1,28 +1,29 @@
 # ComfyUI_RH_OminiControl
 
-**ComfyUI_RH_OminiControl** 是一个基于 [OminiControl](https://github.com/Yuanshi9815/OminiControl) 的 ComfyUI 插件。通过分拆 pipeline 加载，该插件能够在 NVIDIA RTX 4090 显卡上高效运行。同时，空间（spatial）及填充（fill）功能也通过 schnell 模型生成，减少采样步数，提高整体效率。
+**ComfyUI_RH_OminiControl** is a ComfyUI plugin based on [OminiControl](https://github.com/Yuanshi9815/OminiControl) By splitting the pipeline load, the plugin efficiently runs on NVIDIA RTX 4090 GPUs. Additionally, the spatial and fill functionalities are generated using the schnell model, reducing the number of sampling steps and improving overall efficiency.
 
-## 特性
+## Features
+- **Optimized Performance:**：Utilizes the RTX 4090's computational power through pipeline splitting.
+- **Efficient Generation:**：Uses the schnell model to generate spatial and fill, reducing sampling steps and enhancing generation efficiency.
+- **Easy Installation:**：Relies on commonly used ComfyUI libraries, typically requiring no additional installation.
+- **Flexible Configuration:**：Supports custom model paths for easier management and updates.
 
-- **优化性能**：通过分拆 pipeline 加载，充分利用 RTX 4090 的计算能力。
-- **高效生成**：使用 schnell 模型生成 spatial 及 fill，减少采样步数，提升生成效率。
-- **易于安装**：依赖 ComfyUI 常用库，通常无需额外安装。
-- **灵活配置**：支持自定义模型路径，便于管理和更新模型。
 
-## 安装指南
+## Installation Guide
 
-### 前置条件
+### Prerequisites
 
-- **ComfyUI**：确保已安装并配置好 [ComfyUI](https://github.com/comfyanonymous/ComfyUI)。
-- **Python 依赖**：通常不需要额外安装库，但建议安装 `diffusers` 版本 0.31.0 以支持 FluxPipeline。
-
-## 下载插件
-克隆本插件仓库到 custom_nodes：
+- **ComfyUI**：Ensure that ComfyUI is installed and configured. [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
+- **Python 依赖**：No additional libraries are usually required, but it is recommended to install diffusers version 0.31.0 to support FluxPipeline.
+  
+## Download
+Clone the plugin repository into custom_nodes:
 ```
 git clone https://github.com/HM-RunningHub/ComfyUI_RH_OminiControl.git
 ```
 
-## 模型目录结构：
+
+## Model Directory Structure:
 ```
 /models/flux
 tree
@@ -81,17 +82,17 @@ tree
 
 12 directories, 39 files
 ```
-### 根据上面的目录机构下载并放置以下模型：
+### Download and place the following models according to the directory structure above:
 ```
-diffusers格式的flux模型，下载地址：https://huggingface.co/black-forest-labs/FLUX.1-schnell
-depth-anything-small-hf/ （用于depth识别，下载地址：https://huggingface.co/LiheYoung/depth-anything-small-hf/tree/main）
-experimental/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/experimental）
-omini/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini）
+Flux model in diffusers format, download here: https://huggingface.co/black-forest-labs/FLUX.1-schnell
+depth-anything-small-hf/ (for depth recognition, download here: https://huggingface.co/LiheYoung/depth-anything-small-hf/tree/main)
+experimental/ (download here: https://huggingface.co/Yuanshi/OminiControl/tree/main/experimental)
+omini/ (download here: https://huggingface.co/Yuanshi/OminiControl/tree/main/omini)
 ```
-### 运行案例展示
-云端一键运行： https://www.runninghub.cn/post/1865085524393500674
-![image](https://github.com/user-attachments/assets/e0548ab7-8cac-4199-b4f3-d86a82f40bbc)
+### Example Run Demo
+One-click cloud run: [https://www.runninghub.ai/post/1865085524393500674]( https://www.runninghub.ai/post/1865085524393500674).
+![image](https://github.com/user-attachments/assets/cc60cbc0-3c44-4da0-8e96-c2f5f89122be)
 
 
-### 致谢
-感谢 Yuanshi9815 及其 OminiControl 项目提供的基础支持。
+### Acknowledgments
+Thanks to Yuanshi9815 and the OminiControl project for providing the foundational support.
