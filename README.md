@@ -1,3 +1,4 @@
+# [中文版说明](README_CN.md).
 # ComfyUI_RH_OminiControl
 
 **ComfyUI_RH_OminiControl** is a ComfyUI plugin based on [OminiControl](https://github.com/Yuanshi9815/OminiControl) By splitting the pipeline load, the plugin efficiently runs on NVIDIA RTX 4090 GPUs. Additionally, the spatial and fill functionalities are generated using the schnell model, reducing the number of sampling steps and improving overall efficiency.
@@ -14,7 +15,7 @@
 ### Prerequisites
 
 - **ComfyUI**：Ensure that ComfyUI is installed and configured. [ComfyUI](https://github.com/comfyanonymous/ComfyUI).
-- **Python 依赖**：No additional libraries are usually required, but it is recommended to install diffusers version 0.31.0 to support FluxPipeline.
+- **Python**：No additional libraries are usually required, but it is recommended to install diffusers version 0.31.0 to support FluxPipeline.
   
 ## Download
 Clone the plugin repository into custom_nodes:
