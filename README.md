@@ -89,6 +89,5 @@ experimental/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree
 omini/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini）
 ```
 
-##致谢
-
+### 致谢
 感谢 Yuanshi9815 及其 OminiControl 项目提供的基础支持。
