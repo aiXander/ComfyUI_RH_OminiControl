@@ -19,10 +19,11 @@
 
 ```bash
 pip install diffusers==0.31.0
-
-## 项目目录结构 / Project Directory Structure
-
+项目目录结构 / Project Directory Structure
 模型文件路径位于 {comfyui_dir}/models/flux/，以下是项目的目录结构：
+
+bash
+复制代码
 {comfyui_dir}/models/flux/
 ├── FLUX.1-schnell/                # diffusers 格式的 Flux 模型
 │   └── 下载地址：https://huggingface.co/black-forest-labs/FLUX.1-schnell
@@ -34,10 +35,21 @@ pip install diffusers==0.31.0
 │   │   └── 下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/experimental
 │   └── omini/                     # OminiControl 主模型
 │       └── 下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini
+下载模型 / Model Downloads
+FLUX.1-schnell 模型：
 
+下载链接：FLUX.1-schnell 模型
+深度识别模型 (depth-anything-small-hf)：
 
-![image](https://github.com/user-attachments/assets/c1535de8-5c8d-40e6-aa7e-aac935eb73e9)
+下载链接：深度识别模型
+OminiControl 模型：
 
-![image](https://github.com/user-attachments/assets/e1200a4d-f483-45de-bec7-0d5f82245dbc)
-
-![image](https://github.com/user-attachments/assets/4fc66b28-ea82-4507-98b8-2e4320beaf52)
+下载链接：OminiControl 模型
+实验性模型： 实验性模型
+使用说明 / Usage Instructions
+下载并解压模型到指定路径：{comfyui_dir}/models/flux/。
+确保安装了所有必需的库（如 diffusers）。
+配置并启动 ComfyUI_RH_OminiControl 插件。
+注意事项 / Notes
+请确保下载了正确版本的模型，并将其放置在正确的目录下。
+若缺少任何库或出现错误，请检查是否已正确安装所有依赖项。
