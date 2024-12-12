@@ -17,20 +17,15 @@
 - **Python 依赖**：通常不需要额外安装库，但建议安装 `diffusers` 版本 0.31.0 以支持 FluxPipeline。
 
 ## 下载插件
-克隆本插件仓库到本地：
-
-Quick Start
-Setup (Optional)
-Environment setup
-conda create -n omini python=3.10
-conda activate omini
-Requirements installation
-pip install -r requirements.txt
-
-## 创建模型目录结构：
+克隆本插件仓库到 custom_nodes：
 ```
-home/dazu/rh_storage/global/models/flux
-[root@LZ-WIN10-TEST03 flux]# tree
+git clone https://github.com/HM-RunningHub/ComfyUI_RH_OminiControl.git
+```
+
+## 模型目录结构：
+```
+/models/flux
+tree
 .
 ├── FLUX.1-schnell
 │   ├── ae.safetensors
@@ -87,12 +82,13 @@ home/dazu/rh_storage/global/models/flux
 12 directories, 39 files
 ```
 ### 根据上面的目录机构下载并放置以下模型：
-
-diffusers格式的flux模型， 下载地址：https://huggingface.co/black-forest-labs/FLUX.1-schnell
+```
+diffusers格式的flux模型，下载地址：https://huggingface.co/black-forest-labs/FLUX.1-schnell
 depth-anything-small-hf/ （用于depth识别，下载地址：https://huggingface.co/LiheYoung/depth-anything-small-hf/tree/main）
 experimental/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/experimental）
 omini/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini）
-
+```
 
 ##致谢
+
 感谢 Yuanshi9815 及其 OminiControl 项目提供的基础支持。
