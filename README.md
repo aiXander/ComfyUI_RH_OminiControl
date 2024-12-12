@@ -89,8 +89,8 @@ experimental/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree
 omini/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini）
 ```
 ### 运行案例展示
-运端一键运行： https://www.runninghub.cn/post/1865085524393500674
-![image](https://github.com/user-attachments/assets/2db219bb-957f-4563-9285-d1a62deb77d1)
+云端一键运行： https://www.runninghub.cn/post/1865085524393500674
+![image](https://github.com/user-attachments/assets/e0548ab7-8cac-4199-b4f3-d86a82f40bbc)
 
 
 ### 致谢
