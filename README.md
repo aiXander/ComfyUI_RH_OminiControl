@@ -23,17 +23,69 @@
 ## 创建模型目录结构：
 
 {comfyui_dir}/models/flux/
-    FLUX.1-schnell/
-    OminiControl/
-        depth-anything-small-hf/
-        experimental/
-        omini/
-### 下载并放置以下模型：
+tree
+.
+├── FLUX.1-schnell
+│   ├── ae.safetensors
+│   ├── model_index.json
+│   ├── README.md
+│   ├── scheduler
+│   │   └── scheduler_config.json
+│   ├── schnell_grid.jpeg
+│   ├── text_encoder
+│   │   ├── config.json
+│   │   └── model.safetensors
+│   ├── text_encoder_2
+│   │   ├── config.json
+│   │   ├── model-00001-of-00002.safetensors
+│   │   ├── model-00002-of-00002.safetensors
+│   │   └── model.safetensors.index.json
+│   ├── tokenizer
+│   │   ├── merges.txt
+│   │   ├── special_tokens_map.json
+│   │   ├── tokenizer_config.json
+│   │   └── vocab.json
+│   ├── tokenizer_2
+│   │   ├── special_tokens_map.json
+│   │   ├── spiece.model
+│   │   ├── tokenizer_config.json
+│   │   └── tokenizer.json
+│   ├── transformer
+│   │   ├── config.json
+│   │   ├── diffusion_pytorch_model-00001-of-00003.safetensors
+│   │   ├── diffusion_pytorch_model-00002-of-00003.safetensors
+│   │   ├── diffusion_pytorch_model-00003-of-00003.safetensors
+│   │   └── diffusion_pytorch_model.safetensors.index.json
+│   └── vae
+│       ├── config.json
+│       └── diffusion_pytorch_model.safetensors
+└── OminiControl
+    ├── depth-anything-small-hf
+    │   ├── config.json
+    │   ├── model.safetensors
+    │   ├── preprocessor_config.json
+    │   └── README.md
+    ├── experimental
+    │   ├── canny.safetensors
+    │   ├── coloring.safetensors
+    │   ├── deblurring.safetensors
+    │   ├── depth.safetensors
+    │   ├── fill.safetensors
+    │   └── subject.safetensors
+    ├── omini
+    │   ├── subject_1024_beta.safetensors
+    │   └── subject_512.safetensors
+    └── README.md
 
-FLUX.1-schnell（diffusers 格式的 flux 模型）：
-下载地址：FLUX.1-schnell
-depth-anything-small-hf（用于 depth 识别）：
-下载地址：depth-anything-small-hf
+12 directories, 39 files
+
+### 根据上面的目录机构下载并放置以下模型：
+
+diffusers格式的flux模型， 下载地址：https://huggingface.co/black-forest-labs/FLUX.1-schnell
+depth-anything-small-hf/ （用于depth识别，下载地址：https://huggingface.co/LiheYoung/depth-anything-small-hf/tree/main）
+experimental/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/experimental）
+omini/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini）
+
 
 ##致谢
 感谢 Yuanshi9815 及其 OminiControl 项目提供的基础支持。
