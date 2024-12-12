@@ -1,55 +1,39 @@
 # ComfyUI_RH_OminiControl
 
-**ComfyUI_RH_OminiControl** 是一个 **ComfyUI** 的插件，基于 **OminiControl**，旨在通过分拆 pipeline 加载优化性能，使该项目能够高效运行于 **NVIDIA RTX 4090** 上。同时，使用 **schnell** 模型生成的 **spatial** 和 **fill**，减少采样步数，从而提高计算效率。
+**ComfyUI_RH_OminiControl** 是一个基于 [OminiControl](https://github.com/Yuanshi9815/OminiControl) 的 ComfyUI 插件。通过分拆 pipeline 加载，该插件能够在 NVIDIA RTX 4090 显卡上高效运行。同时，空间（spatial）及填充（fill）功能也通过 schnell 模型生成，减少采样步数，提高整体效率。
 
-**ComfyUI_RH_OminiControl** 提供了一种更加高效且易于集成的方式来使用 **OminiControl** 模型。
+## 特性
 
-## 功能概述 / Features
+- **优化性能**：通过分拆 pipeline 加载，充分利用 RTX 4090 的计算能力。
+- **高效生成**：使用 schnell 模型生成 spatial 及 fill，减少采样步数，提升生成效率。
+- **易于安装**：依赖 ComfyUI 常用库，通常无需额外安装。
+- **灵活配置**：支持自定义模型路径，便于管理和更新模型。
 
-- **高效计算 / Efficient Computation**: 通过分拆 pipeline 加载优化性能。
-- **schnell 模型支持 / Schnell Model Support**: 使用更少的采样步数以提高效率。
-- **ComfyUI 插件集成 / ComfyUI Plugin Integration**: 与 **ComfyUI** 集成，简化使用流程。
-- **FluxPipeline 支持 / FluxPipeline Support**: 与 **diffusers** 库配合使用，支持 **FluxPipeline** 格式。
+## 安装指南
 
-## 安装要求 / Installation Requirements
+### 前置条件
 
-大部分所需的库为 **ComfyUI** 常用库，因此无需额外安装其他依赖。但以下库可能需要安装：
+- **ComfyUI**：确保已安装并配置好 [ComfyUI](https://github.com/comfyanonymous/ComfyUI)。
+- **Python 依赖**：通常不需要额外安装库，但建议安装 `diffusers` 版本 0.31.0 以支持 FluxPipeline。
 
-- **diffusers** 版本：0.31.0（支持 FluxPipeline）
+## 下载插件
+克隆本插件仓库到本地：
 
-```bash
-pip install diffusers==0.31.0
-项目目录结构 / Project Directory Structure
-模型文件路径位于 {comfyui_dir}/models/flux/，以下是项目的目录结构：
 
-bash
-复制代码
+## 创建模型目录结构：
+
 {comfyui_dir}/models/flux/
-├── FLUX.1-schnell/                # diffusers 格式的 Flux 模型
-│   └── 下载地址：https://huggingface.co/black-forest-labs/FLUX.1-schnell
-│
-├── ComfyUI_RH_OminiControl/        # ComfyUI_RH_OminiControl 插件的模型目录
-│   ├── depth-anything-small-hf/    # 用于深度识别的模型
-│   │   └── 下载地址：https://huggingface.co/LiheYoung/depth-anything-small-hf/tree/main
-│   ├── experimental/              # 实验性模型
-│   │   └── 下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/experimental
-│   └── omini/                     # OminiControl 主模型
-│       └── 下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini
-下载模型 / Model Downloads
-FLUX.1-schnell 模型：
+    FLUX.1-schnell/
+    OminiControl/
+        depth-anything-small-hf/
+        experimental/
+        omini/
+### 下载并放置以下模型：
 
-下载链接：FLUX.1-schnell 模型
-深度识别模型 (depth-anything-small-hf)：
+FLUX.1-schnell（diffusers 格式的 flux 模型）：
+下载地址：FLUX.1-schnell
+depth-anything-small-hf（用于 depth 识别）：
+下载地址：depth-anything-small-hf
 
-下载链接：深度识别模型
-OminiControl 模型：
-
-下载链接：OminiControl 模型
-实验性模型： 实验性模型
-使用说明 / Usage Instructions
-下载并解压模型到指定路径：{comfyui_dir}/models/flux/。
-确保安装了所有必需的库（如 diffusers）。
-配置并启动 ComfyUI_RH_OminiControl 插件。
-注意事项 / Notes
-请确保下载了正确版本的模型，并将其放置在正确的目录下。
-若缺少任何库或出现错误，请检查是否已正确安装所有依赖项。
+##致谢
+感谢 Yuanshi9815 及其 OminiControl 项目提供的基础支持。
