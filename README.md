@@ -19,6 +19,13 @@
 ## 下载插件
 克隆本插件仓库到本地：
 
+Quick Start
+Setup (Optional)
+Environment setup
+conda create -n omini python=3.10
+conda activate omini
+Requirements installation
+pip install -r requirements.txt
 
 ## 创建模型目录结构：
 
