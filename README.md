@@ -88,6 +88,10 @@ depth-anything-small-hf/ （用于depth识别，下载地址：https://huggingfa
 experimental/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/experimental）
 omini/ （下载地址：https://huggingface.co/Yuanshi/OminiControl/tree/main/omini）
 ```
+### 运行案例展示
+运端一键运行： https://www.runninghub.cn/post/1865085524393500674
+![image](https://github.com/user-attachments/assets/2db219bb-957f-4563-9285-d1a62deb77d1)
+
 
 ### 致谢
 感谢 Yuanshi9815 及其 OminiControl 项目提供的基础支持。
