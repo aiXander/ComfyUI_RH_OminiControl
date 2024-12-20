@@ -48,7 +48,7 @@ def decode_latents(flux_dir, latents):
         torch_dtype=torch.bfloat16,
     ).to("cuda")
 
-    latents = pipeline._unpack_latents(latents, g_width, g_height, pipeline.vae_scale_factor)
+    latents = pipeline._unpack_latents(latents, g_height, g_width, pipeline.vae_scale_factor)
     latents = (
         latents / pipeline.vae.config.scaling_factor
     ) + pipeline.vae.config.shift_factor
