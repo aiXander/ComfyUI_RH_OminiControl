@@ -75,7 +75,7 @@ def run(t_img, prompt, condition_type, seed):
 
     condition = Condition(condition_type, image)
 
-    seed_everything()
+    seed_everything(int(seed) % (2 ^ 16))
 
     result_latents = generate(
     # result_img = generate(
