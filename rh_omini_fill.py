@@ -83,7 +83,7 @@ def run(t_img, t_mask, prompt, seed):
 
     condition = Condition('fill', image)
 
-    seed_everything()
+    seed_everything(int(seed) % (2 ^ 16))
 
     result_latents = generate(
     # result_img = generate(
