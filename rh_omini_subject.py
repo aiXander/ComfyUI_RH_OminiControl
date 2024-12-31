@@ -19,7 +19,7 @@ def run(t_img, prompt, seed):
     release_gpu()
 
     flux_dir = os.path.join(folder_paths.models_dir, 'flux', 'FLUX.1-schnell')
-    lora_model = os.path.join(folder_paths.models_dir, 'flux', 'OminiControl', 'omini', 'subject_512.safetensors')
+    lora_model = os.path.join(folder_paths.models_dir, 'flux', 'OminiControl', 'omini', 'subject_1024_beta.safetensors')
 
     encoded_condition = encode_condition(flux_dir, image)
 
