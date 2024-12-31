@@ -8,8 +8,8 @@ from diffusers.pipelines.flux.pipeline_flux import (
     FluxPipelineOutput,
 )
 
-g_width = 512
-g_height = 512
+g_width = 1024
+g_height = 1024
 
 def release_gpu():
     gc.collect()
